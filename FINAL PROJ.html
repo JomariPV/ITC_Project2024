@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+    background-color: #FFF5E0;
+    margin: 0px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: #FFF5E0;
+    padding: 0px;
+    margin-left: 1rem;
+    margin-bottom: -1.5rem;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    color: #E48586;
+}
+
+.marquee-horizontal2 {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.track-horizontal2 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee-horizontal 15s linear infinite;
+}
+
+.slides {
+    box-sizing: border-box;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+@keyframes marquee-horizontal {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-66.8%);
+    }
+}
+
+p {
+    font-size: 150%;
+    text-align: center;
+    font-family: "Palatino Linotype", serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.category {
+    background-color: #FCBAAD;
+    padding: 15px 10px;
+    bottom: 4rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin-bottom: 5rem;
+}
+
+.zoom-image {
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 10;
+}
+
+.zoom-image img {
+    width: 45vh;
+    height: auto;
+    transition: transform 0.3s;
+    display: block;
+    margin: 0.5rem;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+.category2 {
+    margin: -1rem;
+}
+
+.good-intentions {
+    display: flex;
+    justify-content: center;
+}
+
+.good-intentions img {
+    width: 15%;
+    align-items: center;
+    margin: 1rem;
+}
+
+.footer {
+    background-color: #FCBAAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starglow-text {
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 80%;
+}
+
+/* Shopee-like product listings */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.product {
+    width: 200px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-to-cart,
+.view-product {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ee4d2d; /* Shopee's orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover,
+.view-product:hover {
+    background-color: #e0330d; /* Darker shade of orange on hover */
+}
+</style>
+
+<head>
+
+<title>Star Glow Co.</title>
+
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <nav class="navbar">
+        <ul>
+        <li><a href = "C:\Users\202312207\Desktop\Homepage\Homepage.html"><img src = "starglow.png" height = "70" width = "70"> </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\About Us\About Us.html"> About Us </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\Contacts\Contacts.html"> Contact </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\Homepage\Cart.html"> Cart </a></li>
+        </ul>
+    </nav>
+    <HR>
+
+    <H2><CENTER>‧₊˚❀༉‧₊˚.LIP PRODUCTS‧₊˚❀༉‧₊˚.</CENTER></H2>
+
+    <div class="marquee-horizontal2">
+        <div class="track-horizontal2">
+            <div class="slides"><img src="C:\Users\202312207\Desktop\FINAL\A.png" width="600" height="500" alt="Collage" /></div>
+            <div class="slides"><img src="C:\Users\202312207\Desktop\FINAL\C.png" width="600" height="500" alt="Maybelline" /></div>
+            <div class="slides"><img src="C:\Users\202312207\Desktop\FINAL\B.png" width="600" height="500" alt="Careline" /></div>
+            <div class="slides"><img src="C:\Users\202312207\Desktop\FINAL\D.png" width="600" height="500" alt="BT21" /></div>
+        </div>
+    </div>
+
+    <p> These products serve different purposes, from providing hydration and protection (lip balm) to adding color (lipstick and lip gloss) 
+        and defining lip contours (lip liner). <br> They can be used separately or combined to achieve various desired lip looks  and cater to different preferences and occasions
+        or even for you everyday look!</p> 
+
+    <div class="category">
+        <h1><center> The best product for your lips </center></h1>
+        <H3><CENTER> This lip products are hand pick and tested by us giving you a authentic and trusted review and recommendation that will not disappoint your wallet and you.</CENTER></H3>
+        <div class="container">
+            <div class="product-container">
+				<div class="product">
+					<img src="C:\Users\202312207\Desktop\FINAL\1.png" alt="Lip Liner">
+					<div class="product-info">
+							<p>Lip Liner</p>
+							<p>$10.99</p>
+							<div class="product-buttons">
+								<a href="#" class="add-to-cart" onclick="addToCart('Lip Liner', '$10.99', https://images.app.goo.gl/QSPVe24UZ54Dy2JMA)">Add to Cart</a>
+								<button class="view-product" onclick="showMessage('Lip Liner', '$10.99')">View</button>
+							</div>
+						</div>
+					</div>
+                <div class="product">
+                    <img src="C:\Users\202312207\Desktop\FINAL\4.png" alt="Lip Balm">
+                    <div class="product-info">
+                        <p>Lip Gloss</p>
+                        <p>$8.99</p>
+                        <div class="product-buttons">
+                            <a href="#" class="add-to-cart" onclick="addToCart('Lip Gloss', '$8.99')">Add to Cart</a>
+                            <button class="view-product" onclick="showMessage('Lip Gloss', '$8.99')">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="C:\Users\202312207\Desktop\FINAL\2.png" alt="Lip Gloss">
+                    <div class="product-info">
+                        <p>Lip Balm</p>
+                        <p>$12.99</p>
+                        <div class="product-buttons">
+                            <a href="#" class="add-to-cart" onclick="addToCart('Lip Balm', '$12.99')">Add to Cart</a>
+                            <button class="view-product" onclick="showMessage('Lip Balm', '$12.99')">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="C:\Users\202312207\Desktop\FINAL\3.png" alt="Lipstick">
+                    <div class="product-info">
+                        <p>Lipstick</p>
+                        <p>$15.99</p>
+                        <div class="product-buttons">
+                            <a href="#" class="add-to-cart" onclick="addToCart('Lipstick', '$15.99')">Add to Cart</a>
+                            <button class="view-product" onclick="showMessage('Lipstick', '$15.99')">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category2">
+        <h1><center> made with good intentions </center></h1>
+        <div class="good-intentions">
+            <img src="crueltyfree.png" alt="Cruelty Free">
+            <img src="skincaring.png" alt="Skin Caring Makeup">
+            <img src="alltypes.png" alt="Cruelty Free">
+            <img src="sourcedfrom.png" alt="All Types of Skin">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="starglow-text">
+            <p><b> S t a r &nbsp; G l o w &nbsp; C o . </b></p>
+        </div>
+    </div>
+
+     <script>
+        function showMessage(productName, price) {
+            alert("Product: " + productName + "\nPrice: " + price);
+        }
+
+        function addToCart(productName, price, imageUrl) {
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var newItem = { name: productName, price: price, image: imageUrl };
+    cartItems.push(newItem);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    alert("Product added to cart:\n" + productName + "\nPrice: " + price);
+}
+
+    </script>
+	
+	
+
+
+</body>
+</html>
+
+
+		

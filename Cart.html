@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: "Lucida Sans Unicode", sans-serif;
+            background-color: #FFF5E0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFF5E0;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #E48586;
+            font-size: 20px;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .cart-item-info h3 {
+            margin: 0;
+        }
+
+        .cart-item-info p {
+            margin: 5px 0;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        .remove-btn {
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .remove-btn:hover {
+            background-color: #ff3333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+        <li><a href = "C:\Users\202312207\Desktop\Homepage\Homepage.html"><img src = "starglow.png" height = "70" width = "70"> </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\About Us\About Us.html"> About Us </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\Contacts\Contacts.html"> Contact </a></li>
+		<li><a href = "C:\Users\202312207\Desktop\Homepage\Cart.html"> Cart </a></li>
+        </ul>
+    </nav>
+
+     <!-- Cart container -->
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total" id="total"></div>
+
+        <!-- JavaScript to display cart items -->
+        <script>
+            // Retrieve cart items from local storage
+            var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Display cart items
+            var cartContainer = document.getElementById("cart-items");
+            var totalContainer = document.getElementById("total");
+
+            if (cartItems.length === 0) {
+                cartContainer.innerHTML = "<p>Your shopping cart is empty.</p>";
+            } else {
+                var total = 0;
+                cartItems.forEach(function (item, index) {
+                    var itemElement = document.createElement("div");
+                    itemElement.className = "cart-item";
+                    itemElement.innerHTML = "<img src='" + item.image + "' alt='" + item.name + "'>" +
+                        "<div class='cart-item-info'>" +
+                        "<h3>" + item.name + "</h3>" +
+                        "<p>Price: $" + item.price + "</p>" +
+                        "<button class='remove-btn' onclick='removeItem(" + index + ")'>Remove</button>" +
+                        "</div>";
+                    cartContainer.appendChild(itemElement);
+                    total += parseFloat(item.price.replace('$', ''));
+                });
+
+                totalContainer.innerHTML = "Total: $" + total.toFixed(2);
+            }
+
+            // Function to remove an item from the cart
+            function removeItem(index) {
+                cartItems.splice(index, 1);
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                location.reload(); // Reload the page to reflect changes
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
+	
+
